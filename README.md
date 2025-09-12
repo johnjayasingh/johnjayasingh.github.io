@@ -1,24 +1,98 @@
-# New Project
+# John Jayasingh S - Portfolio Website
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+A modern, responsive portfolio website built with Vite and TypeScript.
 
-## Available Scripts
+## 🚀 Features
 
-### npm start
+- **Modern Tech Stack**: Built with Vite and TypeScript
+- **Responsive Design**: Works perfectly on all devices
+- **Interactive Animations**: Smooth scrolling and hover effects
+- **Professional Layout**: Clean design showcasing experience and skills
+- **Fast Performance**: Optimized build with Vite
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+## 🛠️ Tech Stack
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **Styling**: CSS3 with Custom Properties
+- **Icons**: Font Awesome 6
+- **Fonts**: Inter (Google Fonts)
 
-### npm run build
+## 📁 Project Structure
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+```
+├── index.html          # Main HTML file
+├── index.css           # Stylesheet
+├── index.ts            # TypeScript main file
+├── vite.config.ts      # Vite configuration
+├── tsconfig.json       # TypeScript configuration
+└── package.json        # Dependencies and scripts
+```
 
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.json` config file.
+## 🚀 Getting Started
 
-### Q: What about Eject?
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/johnjayasingh/johnjayasingh.github.io.git
+cd johnjayasingh.github.io
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start development server:
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` folder.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 🎨 Customization
+
+- Update personal information in `index.html`
+- Modify styles in `index.css`
+- Add interactive features in `index.ts`
+
+## 🌟 Skills Highlighted
+
+- **Frontend**: React.js, React Native, Next.js, TypeScript
+- **Backend**: Node.js, GraphQL
+- **Cloud**: AWS
+- **Leadership**: Team Lead experience
+
+## 📧 Contact
+
+- Email: johnjayasingh.s@gmail.com
+- GitHub: [johnjayasingh](https://github.com/johnjayasingh)
+- YouTube: [@JohnJayasinghS](https://www.youtube.com/@JohnJayasinghS)
+- Medium: [@jayasinghs](https://medium.com/@jayasinghs)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with ❤️ by John Jayasingh S
