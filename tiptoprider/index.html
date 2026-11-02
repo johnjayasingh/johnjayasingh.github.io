@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tip Top Rider: Delivery Game</title>
+<meta name="description" content="A food-delivery bike game on real Indian streets. Ride from the Pollachi villages to Delhi NCR, dodge cows and autos, keep your regulars happy and buy your dream bike.">
+<meta property="og:title" content="Tip Top Rider: Delivery Game">
+<meta property="og:description" content="Deliver food. Read the room. Dodge the city. A bike delivery game set on real Indian streets.">
+<meta property="og:image" content="https://johnjayasingh.github.io/tiptoprider/img/feature.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1E1B4B">
+<link rel="icon" href="img/icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1E1B4B;--ink2:#4a456f;--pink:#FF4F7B;--mari:#FFB800;--teal:#0FA3A3;--paper:#FFF8EC;--paper2:#FBEFD9;--card:#fff;--line:#EADFC8;--muted:#5D5A86}
+@media (prefers-color-scheme:dark){:root{--paper:#15123A;--paper2:#1b1846;--card:#1E1B4B;--line:#34307A;--muted:#B9B5E6;--ink2:#d9d6ff}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 Nunito,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+@media (prefers-color-scheme:dark){body{color:#F4F1FF}}
+a{color:var(--pink);text-underline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hero{background:linear-gradient(180deg,#2f6fd0 0%,#7cc4f5 45%,#ffd9a0 78%,#ff9f6b 100%);color:#fff;overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;background:repeating-linear-gradient(90deg,#1e1e24 0 22px,#f4d24a 22px 44px)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding-top:40px;padding-bottom:40px}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}.brand img{width:56px;height:56px;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.brand b{font:800 20px "Baloo 2",sans-serif;letter-spacing:.01em}
+h1{font:800 clamp(38px,6vw,64px)/1 "Baloo 2",sans-serif;margin:0 0 6px;text-shadow:0 3px 0 rgba(30,27,75,.35)}h1 span{color:var(--mari)}
+.sub{font:800 clamp(18px,2.4vw,22px) "Baloo 2",sans-serif;margin:0 0 12px;color:#fff}
+.lede{font-size:18px;font-weight:700;max-width:34ch;margin:0 0 22px;color:#fff;text-shadow:0 1px 2px rgba(30,27,75,.35)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font:800 17px "Baloo 2",sans-serif;text-decoration:none;border:0}
+.btn.play{background:var(--ink);color:#fff;box-shadow:0 4px 0 rgba(0,0,0,.25)}.btn.play small{display:block;font:700 11px Nunito,sans-serif;opacity:.8;line-height:1}
+.btn.ghost{background:rgba(255,255,255,.9);color:var(--ink)}
+.phone{justify-self:center;width:min(300px,78vw);aspect-ratio:600/1170;border-radius:34px;border:8px solid #14122e;overflow:hidden;box-shadow:0 18px 40px rgba(20,18,46,.45);background:#14122e;transform:rotate(2deg)}
+.phone img{width:100%;height:100%;object-fit:cover;display:block}
+section{padding:48px 0}
+h2{font:800 clamp(28px,4vw,36px)/1.1 "Baloo 2",sans-serif;margin:0 0 8px}
+.kicker{color:var(--muted);font-weight:700;margin:0 0 24px;max-width:60ch}
+.feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.f .i{font-size:30px}.f h3{font:800 20px "Baloo 2",sans-serif;margin:6px 0 4px}.f p{margin:0;color:var(--muted);font-weight:700;font-size:15.5px}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;-webkit-overflow-scrolling:touch}
+.shots figure{margin:0;flex:0 0 auto;width:220px;scroll-snap-align:start}
+.shots img{width:100%;border-radius:18px;display:block;box-shadow:0 8px 20px rgba(20,18,46,.2);background:#222}
+.shots figcaption{font-weight:800;font-size:14px;color:var(--muted);margin-top:8px;text-align:center}
+.band{background:var(--ink);color:#fff}.band .kicker{color:#c9c5ef}
+.pro{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+.pro ul{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:8px;font-weight:800}.pro img{width:100%;max-width:420px;border-radius:18px;justify-self:center;box-shadow:0 10px 28px rgba(0,0,0,.4)}
+.cities{display:flex;flex-wrap:wrap;gap:8px}.cities span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:800;font-size:15px}.cities span b{color:var(--pink);font-size:12px;margin-left:6px}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-weight:700;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-top:28px}.phone{transform:none;width:min(260px,70vw)}.pro{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brand"><img src="img/icon.webp" alt=""><b>Tip Top Rider</b></div>
+      <h1>Tip Top <span>Rider</span></h1>
+      <p class="sub">The Indian food-delivery bike game</p>
+      <p class="lede">Deliver food. Read the room. Dodge the city. From village roads in Pollachi to the jams of Delhi NCR.</p>
+      <div class="cta">
+        <span class="btn play" aria-label="Coming soon on Google Play">▶ <span><small>Coming soon on</small>Google Play</span></span>
+        <a class="btn ghost" href="mailto:johnjayasingh.s@gmail.com?subject=Tip%20Top%20Rider%20beta">Join the beta</a>
+      </div>
+    </div>
+    <div class="phone"><img src="img/ride-village.jpg" alt="Riding a moped past paddy fields, goats and tiled-roof houses in a Pollachi village"></div>
+  </div>
+</header>
+
+<main>
+  <section class="wrap">
+    <h2>Every delivery is a little story</h2>
+    <p class="kicker">Hand-drawn Indian streets, real bikes (with parody names), and customers who remember you.</p>
+    <div class="feat">
+      <div class="f"><div class="i">🛵</div><h3>Ride real Indian roads</h3><p>Cows that ignore your horn, autos cutting in, open drains, potholes, rain puddles and speed breakers with a gap only locals know.</p></div>
+      <div class="f"><div class="i">🗺️</div><h3>Village to metro</h3><p>Start in the Pollachi villages, then Coimbatore, Mysuru, Madurai, Kochi, Vizag, and up to Chennai, Bengaluru, Hyderabad, Pune, Mumbai and Delhi NCR.</p></div>
+      <div class="f"><div class="i">🤝</div><h3>Regulars who remember you</h3><p>300+ customers and restaurants. Be polite, ride smooth, and strangers become family: bigger tips, faster parcels, free chai.</p></div>
+      <div class="f"><div class="i">🏍️</div><h3>Buy your dream bike</h3><p>From a rattling moped to a superbike. Pay in full and do the lemon-and-coconut puja, or take an EMI and hope the recovery agent never visits.</p></div>
+      <div class="f"><div class="i">📞</div><h3>Calls, cops and chaos</h3><p>Customers ring you mid-ride, police check your helmet, superbike gangs blast past, and the jam gets so bad you squeeze through.</p></div>
+      <div class="f"><div class="i">📸</div><h3>Photo shoot</h3><p>Pose with your bike in front of Charminar, the Marina or the Coimbatore hills and share it with your friends.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <figure><img src="img/ride-village.jpg" alt="Village road in Pollachi" loading="lazy"><figcaption>Pollachi villages</figcaption></figure>
+      <figure><img src="img/ride-hyderabad.jpg" alt="Old city traffic near Charminar, Hyderabad" loading="lazy"><figcaption>Charminar, Hyderabad</figcaption></figure>
+      <figure><img src="img/ride-delhi.jpg" alt="Connaught Place, Delhi" loading="lazy"><figcaption>Connaught Place, Delhi</figcaption></figure>
+      <figure><img src="img/home.jpg" alt="Home screen with the city list" loading="lazy"><figcaption>12 cities, 46 areas</figcaption></figure>
+      <figure><img src="img/showroom-puja.jpg" alt="New bike puja at the showroom with lemons under the tyres" loading="lazy"><figcaption>New bike puja</figcaption></figure>
+      <figure><img src="img/delivery-photo.jpg" alt="Delivery photo with the new bike and the salesman" loading="lazy"><figcaption>Your delivery photo</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap pro">
+      <div>
+        <h2>Free to play</h2>
+        <p class="kicker">The whole game is free. Optional Tip Top Pro removes the ads between shifts and boosts your earnings.</p>
+        <ul><li>🚫 No ads between shifts</li><li>💰 2× earnings every shift</li><li>💸 +15% tips from every customer</li><li>⭐ Pro badge on your rider</li></ul>
+        <p class="kicker" style="margin:0">Monthly, yearly or once for life. Small coin packs from ₹10.</p>
+      </div>
+      <img src="img/photo-shoot.jpg" alt="A shareable photo of a rider with their bike and stats" loading="lazy">
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Cities</h2>
+    <p class="kicker">Each city has its own landmarks, food and traffic. Bigger cities pay more, and fine more.</p>
+    <div class="cities">
+      <span>Pollachi<b>START</b></span><span>Coimbatore<b>TIER 2</b></span><span>Mysuru<b>TIER 2</b></span><span>Madurai<b>TIER 2</b></span><span>Kochi<b>TIER 2</b></span><span>Visakhapatnam<b>TIER 2</b></span>
+      <span>Chennai<b>METRO</b></span><span>Bengaluru<b>METRO</b></span><span>Hyderabad<b>METRO</b></span><span>Pune<b>METRO</b></span><span>Mumbai<b>METRO</b></span><span>Delhi NCR<b>METRO</b></span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Tip Top Rider · Made in India. All business names in the game are fictional parodies.</span>
+    <nav><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:johnjayasingh.s@gmail.com">Contact</a></nav>
+  </div>
+</footer>
+</body>
+</html>
