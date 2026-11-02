@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tip Top Rider: Delivery Game</title>
-<meta name="description" content="A food-delivery bike game on real Indian streets. Ride from the Pollachi villages to Delhi NCR, dodge cows and autos, keep your regulars happy and buy your dream bike.">
+<meta name="description" content="A food-delivery bike game on real Indian streets. Ride from the Pollachi villages to Delhi NCR, dodge cows and autos, drift into the drop zone with one-tap Style Park, fill your TURBO and ride anything from a bicycle to a superbike.">
 <meta property="og:title" content="Tip Top Rider: Delivery Game">
 <meta property="og:description" content="Deliver food. Read the room. Dodge the city. A bike delivery game set on real Indian streets.">
 <meta property="og:image" content="https://johnjayasingh.github.io/tiptoprider/img/feature.png">
@@ -33,9 +33,11 @@ h1{font:800 clamp(38px,6vw,64px)/1 "Baloo 2",sans-serif;margin:0 0 6px;text-shad
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font:800 17px "Baloo 2",sans-serif;text-decoration:none;border:0}
 .btn.play{background:var(--ink);color:#fff;box-shadow:0 4px 0 rgba(0,0,0,.25)}.btn.play small{display:block;font:700 11px Nunito,sans-serif;opacity:.8;line-height:1}
 .btn.ghost{background:rgba(255,255,255,.9);color:var(--ink)}
+.beta{margin:12px 0 0;font-weight:700;font-size:15px;max-width:40ch;color:#fff;text-shadow:0 1px 2px rgba(30,27,75,.35)}.beta a{color:#fff;font-weight:800}.beta span{display:block;font-size:13.5px;opacity:.92}
+.ver{display:inline-block;margin-top:14px;background:rgba(30,27,75,.55);color:#fff;border-radius:999px;padding:4px 12px;font-weight:800;font-size:13px}
 .phone{justify-self:center;width:min(300px,78vw);aspect-ratio:600/1170;border-radius:34px;border:8px solid #14122e;overflow:hidden;box-shadow:0 18px 40px rgba(20,18,46,.45);background:#14122e;transform:rotate(2deg)}
-.phone img{width:100%;height:100%;object-fit:cover;display:block}
-section{padding:48px 0}
+.phone picture{display:block;width:100%;height:100%}.phone img{width:100%;height:100%;object-fit:cover;display:block}
+section{padding:48px 0}main>section.wrap{padding-top:44px;padding-bottom:4px}
 h2{font:800 clamp(28px,4vw,36px)/1.1 "Baloo 2",sans-serif;margin:0 0 8px}
 .kicker{color:var(--muted);font-weight:700;margin:0 0 24px;max-width:60ch}
 .feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
@@ -43,7 +45,8 @@ h2{font:800 clamp(28px,4vw,36px)/1.1 "Baloo 2",sans-serif;margin:0 0 8px}
 .f .i{font-size:30px}.f h3{font:800 20px "Baloo 2",sans-serif;margin:6px 0 4px}.f p{margin:0;color:var(--muted);font-weight:700;font-size:15.5px}
 .shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;-webkit-overflow-scrolling:touch}
 .shots figure{margin:0;flex:0 0 auto;width:220px;scroll-snap-align:start}
-.shots img{width:100%;border-radius:18px;display:block;box-shadow:0 8px 20px rgba(20,18,46,.2);background:#222}
+.shots img{width:100%;height:auto;border-radius:18px;display:block;box-shadow:0 8px 20px rgba(20,18,46,.2);background:#222}
+.new .f{border-color:var(--mari)}.new .f .tag{display:inline-block;background:var(--pink);color:#fff;border-radius:999px;font:800 11px Nunito,sans-serif;letter-spacing:.08em;padding:2px 8px;vertical-align:middle;margin-left:6px}
 .shots figcaption{font-weight:800;font-size:14px;color:var(--muted);margin-top:8px;text-align:center}
 .band{background:var(--ink);color:#fff}.band .kicker{color:#c9c5ef}
 .pro{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
@@ -59,15 +62,17 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
 <header class="hero">
   <div class="wrap">
     <div>
-      <div class="brand"><img src="img/icon.webp" alt=""><b>Tip Top Rider</b></div>
+      <div class="brand"><img src="img/icon.webp" alt="" width="56" height="56"><b>Tip Top Rider</b></div>
       <h1>Tip Top <span>Rider</span></h1>
       <p class="sub">The Indian food-delivery bike game</p>
       <p class="lede">Deliver food. Read the room. Dodge the city. From village roads in Pollachi to the jams of Delhi NCR.</p>
       <div class="cta">
-        <a class="btn play" href="https://play.google.com/apps/internaltest/4700508840905994876" target="_blank" rel="noopener" aria-label="Early access on Google Play">▶ <span><small>Early access on</small>Google Play</span></a>
+        <a class="btn play" data-play href="https://play.google.com/store/apps/details?id=com.johnjayasingh.tiptoprider">▶ <span><small>Get it on</small>Google Play</span></a>
       </div>
+      <p class="beta"><a data-beta href="https://play.google.com/apps/testing/com.johnjayasingh.tiptoprider">Join the beta test</a><span>Sign in with your Google account and tap Become a tester, then install from Google Play.</span></p>
+      <span class="ver">Version 1.4.0 · Android beta</span>
     </div>
-    <div class="phone"><img src="img/ride-village.jpg" alt="Riding a moped past paddy fields, goats and tiled-roof houses in a Pollachi village"></div>
+    <div class="phone"><picture><source srcset="img/style-park.webp" type="image/webp"><img src="img/style-park.jpg" alt="Style park: the delivery bike has just drifted onto the marker in the green drop zone and the customer cheers: Smoke and style! Love it!" width="600" height="1170"></picture></div>
   </div>
 </header>
 
@@ -76,24 +81,44 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
     <h2>Every delivery is a little story</h2>
     <p class="kicker">Hand-drawn Indian streets, real bikes (with parody names), and customers who remember you.</p>
     <div class="feat">
-      <div class="f"><div class="i">🛵</div><h3>Ride real Indian roads</h3><p>Cows that ignore your horn, autos cutting in, open drains, potholes, rain puddles and speed breakers with a gap only locals know.</p></div>
+      <div class="f"><div class="i">🛵</div><h3>Ride real Indian roads</h3><p>Cows that ignore your horn, autos cutting in, open drains, potholes, rain puddles, and speed breakers that throw you in the air if you hit them too fast.</p></div>
       <div class="f"><div class="i">🗺️</div><h3>Village to metro</h3><p>Start in the Pollachi villages, then Coimbatore, Mysuru, Madurai, Kochi, Vizag, and up to Chennai, Bengaluru, Hyderabad, Pune, Mumbai and Delhi NCR.</p></div>
       <div class="f"><div class="i">🤝</div><h3>Regulars who remember you</h3><p>300+ customers and restaurants. Be polite, ride smooth, and strangers become family: bigger tips, faster parcels, free chai.</p></div>
-      <div class="f"><div class="i">🏍️</div><h3>Buy your dream bike</h3><p>From a rattling moped to a superbike. Pay in full and do the lemon-and-coconut puja, or take an EMI and hope the recovery agent never visits.</p></div>
-      <div class="f"><div class="i">📞</div><h3>Calls, cops and chaos</h3><p>Customers ring you mid-ride, police check your helmet, superbike gangs blast past, and the jam gets so bad you squeeze through.</p></div>
+      <div class="f"><div class="i">🏍️</div><h3>Buy your dream bike</h3><p>42 bikes, from a ₹350 bicycle and a rattling moped to 10 adventure bikes and superbikes. Pay in full and do the lemon-and-coconut puja, or take an EMI and hope the recovery agent never visits.</p></div>
+      <div class="f"><div class="i">📞</div><h3>Calls, cops and chaos</h3><p>Customers ring you mid-ride, police check your helmet (run and they will catch you), superbike gangs blast past, and the jam gets so bad you squeeze through.</p></div>
       <div class="f"><div class="i">📸</div><h3>Photo shoot</h3><p>Pose with your bike in front of Charminar, the Marina or the Coimbatore hills and share it with your friends.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap new" aria-labelledby="new-title">
+    <h2 id="new-title">New in version 1.4</h2>
+    <p class="kicker">The biggest update yet: easier controls, a practice street, stunts at the door and a lot more to ride.</p>
+    <div class="feat">
+      <div class="f"><div class="i">👆</div><h3>Ride your way</h3><p>Four control schemes: Follow finger (slide anywhere and the bike follows), Thumb ring, Tilt or a two-thumb handlebar. Bigger FASTER and BRAKE buttons, and the horn honks by itself.</p></div>
+      <div class="f"><div class="i">🎓</div><h3>Rider Academy</h3><p>A quiet practice street with friendly lesson cards for speed, braking, reversing, squeezing through, U-turns, fuel and charging. Nothing can go wrong.</p></div>
+      <div class="f"><div class="i">✨</div><h3>One-tap Style Park</h3><p>Stop anywhere in the big green zone and walk the bag to the door, or tap STYLE PARK and drift or stoppie right onto the marker. Some customers cheer, some don't.</p></div>
+      <div class="f"><div class="i">⚡</div><h3>TURBO and power-ups</h3><p>Close shaves, slipstreams and overtakes fill your TURBO. Grab coin runs, a coin magnet, a food shield, extra time, a boost and Rider Sense.</p></div>
+      <div class="f"><div class="i">🧠</div><h3>Rider Sense</h3><p>Your rider learns to steer around people, animals and traffic, and gets better with every shift.</p></div>
+      <div class="f"><div class="i">🚲</div><h3>Bicycles</h3><p>A city roadster, a mountain bike and a road bike. Pedal power with an energy meter, no fuel, no police paperwork, and traffic gives you room.</p></div>
+      <div class="f"><div class="i">🏔️</div><h3>10 adventure bikes</h3><p>Tall, tough bikes that ride straight over potholes and speed breakers. Switch rides any time from My bikes in your garage.</p></div>
+      <div class="f"><div class="i">🚑</div><h3>Help is on the way</h3><p>Took a few tumbles? A friendly ambulance crew patches you up and fixes your bike. Keep falling and they will have a word with you.</p></div>
+      <div class="f"><div class="i">🎵</div><h3>20 riding songs</h3><p>Original tracks, 10 of them South Indian, with separate music and sound switches, a music volume and a traffic level from Light to Full.</p></div>
     </div>
   </section>
 
   <section class="wrap">
     <h2>Screenshots</h2>
     <div class="shots">
-      <figure><img src="img/ride-village.jpg" alt="Village road in Pollachi" loading="lazy"><figcaption>Pollachi villages</figcaption></figure>
-      <figure><img src="img/ride-hyderabad.jpg" alt="Old city traffic near Charminar, Hyderabad" loading="lazy"><figcaption>Charminar, Hyderabad</figcaption></figure>
-      <figure><img src="img/ride-delhi.jpg" alt="Connaught Place, Delhi" loading="lazy"><figcaption>Connaught Place, Delhi</figcaption></figure>
-      <figure><img src="img/home.jpg" alt="Home screen with the city list" loading="lazy"><figcaption>12 cities, 46 areas</figcaption></figure>
-      <figure><img src="img/showroom-puja.jpg" alt="New bike puja at the showroom with lemons under the tyres" loading="lazy"><figcaption>New bike puja</figcaption></figure>
-      <figure><img src="img/delivery-photo.jpg" alt="Delivery photo with the new bike and the salesman" loading="lazy"><figcaption>Your delivery photo</figcaption></figure>
+      <figure><picture><source srcset="img/style-park.webp" type="image/webp"><img src="img/style-park.jpg" alt="Style park: the bike drifts onto the marker in the green drop zone while the customer cheers" width="600" height="1170" loading="lazy"></picture><figcaption>One-tap Style Park</figcaption></figure>
+      <figure><picture><source srcset="img/turbo.webp" type="image/webp"><img src="img/turbo.jpg" alt="TURBO firing next to a red bus on a rainy Bandra road, with a food shield power-up running" width="600" height="1170" loading="lazy"></picture><figcaption>TURBO in the Mumbai rain</figcaption></figure>
+      <figure><picture><source srcset="img/academy.webp" type="image/webp"><img src="img/academy.jpg" alt="Rider Academy lesson card: Cows own the road, lesson 7 of 18" width="600" height="1170" loading="lazy"></picture><figcaption>Rider Academy</figcaption></figure>
+      <figure><picture><source srcset="img/cycle.webp" type="image/webp"><img src="img/cycle.jpg" alt="Riding a road bike through Fort Kochi with coins ahead and cars keeping their distance" width="600" height="1170" loading="lazy"></picture><figcaption>Bicycles, Fort Kochi</figcaption></figure>
+      <figure><picture><source srcset="img/door.webp" type="image/webp"><img src="img/door.jpg" alt="Door card for a happy customer with a Loved your stoppie chip and three reply choices" width="600" height="1170" loading="lazy"></picture><figcaption>Read every customer</figcaption></figure>
+      <figure><picture><source srcset="img/ambulance.webp" type="image/webp"><img src="img/ambulance.jpg" alt="Paramedics bandage the rider next to an ambulance with its rear doors open in Chandni Chowk" width="600" height="1170" loading="lazy"></picture><figcaption>Friendly paramedics</figcaption></figure>
+      <figure><picture><source srcset="img/adventure.webp" type="image/webp"><img src="img/adventure.jpg" alt="Showroom reveal of the Bavaria GS 1250 Adventure with the rider cheering" width="600" height="1170" loading="lazy"></picture><figcaption>Adventure bikes</figcaption></figure>
+      <figure><picture><source srcset="img/power-ups.webp" type="image/webp"><img src="img/power-ups.jpg" alt="Coin magnet pulling coins to the rider near Charminar, with food shield and coin magnet timers" width="600" height="1170" loading="lazy"></picture><figcaption>Coins and power-ups</figcaption></figure>
+      <figure><picture><source srcset="img/ride-village.webp" type="image/webp"><img src="img/ride-village.jpg" alt="Riding a scooter down a village road in Pollachi past fields, carts and cows" width="600" height="1170" loading="lazy"></picture><figcaption>Pollachi villages</figcaption></figure>
+      <figure><img src="img/showroom-puja.jpg" alt="New bike puja at the showroom with lemons under the tyres" width="600" height="1170" loading="lazy"><figcaption>New bike puja</figcaption></figure>
     </div>
   </section>
 
@@ -105,7 +130,7 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
         <ul><li>🚫 No ads between shifts</li><li>💰 2× earnings every shift</li><li>💸 +15% tips from every customer</li><li>🏍️ Free test rides on any bike</li><li>⭐ Pro badge on your rider</li></ul>
         <p class="kicker" style="margin:0">Monthly, yearly or once for life. Small coin packs from ₹10.</p>
       </div>
-      <img src="img/photo-shoot.jpg" alt="A shareable photo of a rider with their bike and stats" loading="lazy">
+      <img src="img/photo-shoot.jpg" alt="A shareable photo of a rider with their bike and stats" width="720" height="900" loading="lazy">
     </div>
   </section>
 
@@ -125,5 +150,16 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
     <nav><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:johnjayasingh.s@gmail.com">Contact</a></nav>
   </div>
 </footer>
+<script>
+// Google Play links: the store page on Android (opens the Play app); everywhere else the testing opt-in page, because
+// the app is in closed testing and the store page shows "not found" to anyone who has not joined. New tab on desktop only.
+(function(){var ua=navigator.userAgent||'',d=navigator.userAgentData,
+  android=/Android/i.test(ua)||!!(d&&/android/i.test(d.platform||'')),
+  mobile=android||/iPhone|iPad|iPod|Mobile/i.test(ua)||!!(d&&d.mobile)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),
+  T='https://play.google.com/apps/testing/com.johnjayasingh.tiptoprider';
+  document.querySelectorAll('a[data-play]').forEach(function(a){if(!android)a.href=T});
+  if(!mobile)document.querySelectorAll('a[data-play],a[data-beta]').forEach(function(a){a.target='_blank';a.rel='noopener'});
+})();
+</script>
 </body>
 </html>

@@ -62,19 +62,21 @@
             <p class="game-lead">A food-delivery bike game set on real Indian streets, from the village roads of Pollachi to Mumbai's monsoon traffic. I built it end to end, from the rendering engine to the store release.</p>
             <ul class="facts">
               <li><b>12 cities</b> and 46 areas, each with its own landmarks and food</li>
-              <li><b>30 bikes</b>, from a rattling moped to a 300 km/h superbike</li>
+              <li><b>42 bikes</b>, from a ₹350 bicycle to a 300 km/h superbike</li>
+              <li><b>New in 1.4:</b> one-tap Style Park, TURBO, the Rider Academy and four ways to ride</li>
               <li><b>300+ customers</b> with moods, who remember how you treated them</li>
               <li><b>Plays offline</b> on Android and iPhone</li>
             </ul>
             <div class="actions">
-              <a class="btn btn-pink" href="tiptoprider/">Visit the game page</a>
-              <a class="btn btn-onink" href="https://play.google.com/apps/internaltest/4700508840905994876" target="_blank" rel="noopener">Early access on Google Play</a>
+              <a class="btn btn-pink" data-play href="https://play.google.com/store/apps/details?id=com.johnjayasingh.tiptoprider">Get it on Google Play</a>
+              <a class="btn btn-line-light" href="tiptoprider/">Visit the game page</a>
+              <p class="beta"><a data-beta href="https://play.google.com/apps/testing/com.johnjayasingh.tiptoprider">Join the beta test</a><span>Sign in with your Google account and tap Become a tester, then install from Google Play.</span></p>
             </div>
           </div>
           <div class="phones" aria-label="Screenshots from Tip Top Rider">
-            <figure class="phone p1"><img src="tiptoprider/img/showroom-puja.jpg" alt="A new bike gets a puja with lemons under the tyres at the showroom" width="600" height="1170" loading="lazy" /></figure>
-            <figure class="phone p2"><img src="tiptoprider/img/ride-hyderabad.jpg" alt="Riding through Hyderabad traffic near Charminar" width="600" height="1170" /></figure>
-            <figure class="phone p3"><img src="tiptoprider/img/home.jpg" alt="Choosing an area in Pollachi on the home screen" width="600" height="1170" loading="lazy" /></figure>
+            <figure class="phone p1"><picture><source srcset="tiptoprider/img/turbo.webp" type="image/webp" /><img src="tiptoprider/img/turbo.jpg" alt="TURBO firing next to a red bus on a rainy Mumbai road" width="600" height="1170" loading="lazy" /></picture></figure>
+            <figure class="phone p2"><picture><source srcset="tiptoprider/img/style-park.webp" type="image/webp" /><img src="tiptoprider/img/style-park.jpg" alt="Style park: the delivery bike drifts onto the marker in the green drop zone while the customer cheers" width="600" height="1170" /></picture></figure>
+            <figure class="phone p3"><picture><source srcset="tiptoprider/img/adventure.webp" type="image/webp" /><img src="tiptoprider/img/adventure.jpg" alt="Showroom reveal of a blue adventure bike with the rider cheering" width="600" height="1170" loading="lazy" /></picture></figure>
           </div>
         </div>
         <div class="wrap built">
@@ -146,6 +148,16 @@
     </footer>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      // Google Play links: the store page on Android (opens the Play app); everywhere else the testing opt-in page,
+      // because the app is in closed testing and the store page shows "not found" to non-testers. New tab on desktop only.
+      (function () {
+        var ua = navigator.userAgent || '', d = navigator.userAgentData;
+        var android = /Android/i.test(ua) || !!(d && /android/i.test(d.platform || ''));
+        var mobile = android || /iPhone|iPad|iPod|Mobile/i.test(ua) || !!(d && d.mobile) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        var T = 'https://play.google.com/apps/testing/com.johnjayasingh.tiptoprider';
+        document.querySelectorAll('a[data-play]').forEach(function (a) { if (!android) a.href = T; });
+        if (!mobile) document.querySelectorAll('a[data-play],a[data-beta]').forEach(function (a) { a.target = '_blank'; a.rel = 'noopener'; });
+      })();
       // fan the game screenshots out once, when the band scrolls into view
       (function () {
         var band = document.getElementById('game');
